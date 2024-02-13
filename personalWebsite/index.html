@@ -1,0 +1,174 @@
+<!--Name: Kevin Blinn Date: Novemeber 7th 2022, Program: This program is the first test for my website-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halo Code Camp</title> 
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/9fc90ec289.js" crossorigin="anonymous"></script>
+        <!--COLOR PALLET: #601F8C, #815DA6, #2A0859, #38F2E0, #F29863-->
+    </head>
+    <body>
+    <div id="header">
+        <div class="nav-container">
+            <nav>
+                <img src="images/HaloCode.png" class="logo">
+                <h1 class="title">HALO CODE CAMP</h1>
+                <img src="images/HaloCode.png" class="logo">
+            </nav>
+        </div>
+        <div>
+            <img class="background" src="images/homepage.png" width="100%">
+        </div>  
+       <!-- <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/home-background.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/home-background2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/home-background3.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>            
+         </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div> -->
+    </div> 
+    <!------------SERVICES----------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I can design a responsive website for you or your company.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Building and designing creative UI/UX for any application.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>I can build the app of your dreams.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------PORTFOLIO--------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/c++-logo.png">
+                    <div class="layer">
+                        <h3>C++</h3>
+                        <p>See all of my C/C++ work I've done!!</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/html-logo.png">
+                    <div class="layer">
+                        <h3>HTML/CSS</h3>
+                        <p>See all of my HTML/CSS work I've done!!</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/python-logo.png">
+                    <div class="layer">
+                        <h3>Python</h3>
+                        <p>See all of my Python work I've done!!</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+<!----------------CONTACT INFORMATION---------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>kjb362361@gmail.com</p>
+                <p><i class="fa-regular fa-phone"></i>(631) 626-9577</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i>Copyright Kevin Blinn.<i class="fa-solid fa-code"></i></p>
+    </div>
+</div>
+
+    <script>
+
+        // SLIDE SHOW FOR HOME PAGE
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none"; 
+        }
+        for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block"; 
+        dots[slideIndex-1].className += " active";
+        }
+
+    </script>
+    </body>
+</html>

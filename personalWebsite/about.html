@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halo Code Camp</title> 
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/9fc90ec289.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/home-logo.png" class="logo">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+    <div id="about">
+        <div class="container-about">
+            <div>
+                <h1 class="about-title"><center>About Me</center></h1>
+            </div>
+            <br>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" height="900">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Your Instuctor</h1>
+                    <p class="about-p"><b>My name is Kevin Blinn and I'm from Bluffton, SC 
+                        I'm currently a student at Clemson in the process of persuing my 
+                        Computer Science degree with a minor in Digital Graphic Design.
+                        I love to program and create new things in my spear time. This website will help me 
+                        document my learnings along the way and display all of my creations. Thank you for visiting my site!!</b>
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Resume</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="tab-row">
+                            <div class="tab-column">
+                              <img src="images/ui-poster.png" width="85%">
+                            </div>
+                            <div class="tab-column">
+                              <img src="images/webDev-poster.png" width="85%">
+                            </div>
+                            <div class="tab-column">
+                              <img src="images/iOS-poster.png" width="85%">
+                            </div>
+                          </div>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Hobby</span><br>I officially haven't had the experience in working in 
+                            any technically ocupation. Everything that I have done was for school work or
+                        my own enjoyment </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Class of 2019</span><br>Graduated Smithtown High School East with a
+                            a High School Diploma.</li>
+                            <li><span>Coastal Carolina University 2019-2021</span><br>I started my techincal adventures at Coastal
+                            where I learned the basics of computing and programming. I transferred my Senior year</li>
+                            <li><span>Clemson 2022-Current</span><br>I contiuned my education where I would advance my programming skills
+                            and learn how to develop websites and UIs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div><center><a href="#" class="btn3">Hire Me</a></center></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // TABS FOR ABOUT ME
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for (tablink of tablinks ){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents ){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    </body>
+</html>
